@@ -1,0 +1,163 @@
+\documentclass[12pt]{report}
+
+
+% \usepackage[no-math]{fontspec}
+% \usepackage{xunicode}
+% \usepackage{xltxtra}
+% \XeTeXlinebreaklocale "th_TH"
+% \XeTeXlinebreakskip = 0pt plus 1pt
+% \setmainfont[Scale=1.3]{TH Sarabun New}
+
+\usepackage[a4paper,margin=1.05in]{geometry}
+
+
+\renewcommand{\baselinestretch}{1.2}
+
+\usepackage{amssymb,amsmath,mathrsfs,dsfont}%,mathabx}
+\usepackage{amsthm,stmaryrd,eucal}
+% \usepackage[hypertexnames=false,colorlinks,linkcolor={blue},citecolor={blue}]{hyperref}
+\usepackage{graphicx,float,caption}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{enumitem,framed,color}
+\definecolor{shadecolor}{rgb}{.9,.9,.9}
+\usepackage[numbers,sort&compress,sectionbib]{natbib}
+
+ \usepackage{multirow}
+ \usepackage{xcolor}
+
+\usepackage{indentfirst}
+
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont}{\thesection.}{.2em}{}
+\titleformat{\subsection}
+  {\normalfont\itshape}{\thesubsection.}{.2em}{}
+
+
+
+\counterwithout{section}{chapter}
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancyhead[L]{}
+\fancyhead[R]{\thepage}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+
+\usepackage{macro}
+
+
+\date{}
+
+\begin{document}
+
+\begin{center}
+  \bfseries Thesis Proposal
+\end{center}
+
+\begin{table}[H]
+  \begin{tabular}{@{}ll@{}}
+    Student name:   & Mr.Seangleng Khe \\
+    Student ID: & 67300800401 \\
+    Program: & Sustainable Energy Systems (Ph.D.) \\
+    Supervisor: & Dr.Parin Chaipunya \\
+    Co-supervisor: & Dr.Athikom Bangviwat \\ \\
+    Thesis topic: & Advanced Optimization Modeling Frameworks for Energy Management \\ & concerning Renewable Sources and Electric Vehicles
+  \end{tabular}
+\end{table}
+
+\section{Rationales}
+
+
+% \begin{enumerate}
+% % \item[a.] Explain about energy management systems (EMS) and related models using optimization. Explain different methods used in EMS including building new power plants and demand response.
+
+An energy management system (EMS) is a set of tools combining software and hardware that efficiently manages the energy flows between connected distributed energy resources (DERs). 
+We use an EMS to manage the generation, storage and/or consumption of electricity in order to lower both costs and emissions --- stabilizing the power grid. 
+An EMS is the building block of energy transition and the future of energy, as it monitors and controls a variety of energy assets within a household, building and also in a much larger scale.
+
+There are different approaches that could be integrated within an EMS such as Economic Dispatch, Unit Commitment, Demand Response and Building New Power Plants. 
+Economic Dispatch is a model used in an EMS to allocate generation resources efficiently while considering factors like fuel costs, transmission constraints, and environmental regulations. 
+The goal of economic dispatch is to minimize the total cost of generating electricity while meeting demand \cite{Li2022123678}. 
+Whereas, the Unit Commitment is used to determine the most cost-effective way to schedule the operation of power plants to meet forecasted electricity demand over a specific period. 
+The Unit Commitment model considers factors such as fuel costs, operating constraints, and generation capacities to minimize costs while meeting demand \cite{abdou2018}. 
+Demand Response (DR) is considered as a crucial component of an EMS that involves modifying electricity consumption in response to signals from the grid operator by incentivizing consumers to reduce or shift their electricity usage during peak periods \cite{OCONNELL2014686}, \cite{BLASCHKE2022112878}, \cite{HOFMANN2024100126}.
+DR programs help balance supply and demand, reduce stress on the grid, and avoid the need for building new power plants.
+The DR programs are particularly useful when one takes into account the new demand caused by the increasing volume of electric vehicles (EVs) has threathened seriously the stability of the grid \cite{TUNGOM2024121761}, \cite{SANKARAKUMAR2024112667}.
+Apart from these tools, one could also consider integrating other renewable resources, like bioenergy, into the mix.
+In this context, Thailand is considered as an agricultural country with great potential for biomass due to the large availability of the feedstocks.
+To integrate more of biomass, one turns to use optimization models to assess the need for building new power plants based on factors like future electricity demand forecasts, existing generation capacity, environmental regulations, and cost considerations. 
+These models help decision-makers determine the optimal mix of generation technologies to meet future energy needs.
+
+% \item[b.] Explain about different classes of optimization models that will be used.
+%   Most of the existing models are based on Mixed-Integer Linear Programs (MILP), but why do we need more complex models like Stochastic and Bilevel Programs.
+%
+%
+%   In the fields of energy management systems and related optimization problems, there are variooous classes of optimization models which are eployed to address different complexities and uncertaintie in the energy energy secotr. 
+%   The most widely-used optimzation model in the energy sector is Mixed-Integer Linear Programs (MILP). 
+%   This is because of its ability to handle discrete decision variables (integer variables) alongside continuous variables in a linear programming framework. 
+%   The MIPL models are effective for problems involving unit commitment, economic dispatch, and resource scheduling where binary or integer decisions need to be made. Nonlinear programming models ar eemployed when the objective function or constraints of the optimization problem are nonlinear, which is very beneficial to the energy sector since the models tackle the complex relationships such as nonconvex cost functions, ramping constraints, or transmission losses. The bilevel programming models are used when there are two levels of decision-making in a system, typically between a leader and a follower. This model serves the scenarios like the market clearing where a system operator (leader) sets prices and participants (followers) optimize their strategies based on these prices. Moreover, they are more complex than traditional single-level optimization models but can capture strategic interactions and decision dependencies more accurately. Another model, namely Stochatic programming, captures the uncertainties in the input parameters or variables of the optimization problem such as variable renewable energy generation or uncertain demand forecasts. This model considers multiple scenarios of uncertain parameters and aims to find robust solutions that perform well on average across these scenarios. These models help decision-makers account for uncertainty and make more robust plans in the face of variability.
+%
+
+One could see naturally from the above discussion that renewable energy sources and electric vehicles play pivotal roles in the transition towards a more sustainable and decarbonized energy system. 
+Optimization techniques are essential for effectively integrating these elements into the grid and maximizing their benefits \cite{NEBEY20245422}. 
+These techniques can be employed in different scenarios like renewable energy integration, demand response, and also integrating EVs into the grid.
+Special structures in these applications motivate researchers to design better optimization models that is more applicable and realisitc.
+This indicates a departure from the classical Mixed-Integer Linear Programming (MILP) approach that is well-known among the engineers and practitioners.
+The modern modeling techniques are usually nonlinear and contains multi-level decision structure \cite{zbMATH07661004}.
+Optimization models like Stochastic Programming are also necessary to capture the uncertainty of renewable resources and demand \cite{SEYEDNOURI2024100531}. 
+With appropriate optimization modeling, one could effectively manage renewable resources alongside conventional generation to balance supply and demand, minimize costs, and maintain grid stability under varying conditions. 
+
+
+\section{Objectives}
+\begin{enumerate}[label=\arabic*.]
+  \item To formulate a bilevel optimization model for the managemenf of a demand response program that benefits both producers and consumers.
+  \item To design an optimal biomass infrastructure that concerns with resilience and sustainability.
+\end{enumerate}
+
+\section{Study methodology relating to the proposed research}
+\begin{enumerate}[label=\arabic*.]
+  \item Literature review.\\
+    This phase involves an extensive examination of existing research to establish a foundation for the study.    
+    \begin{enumerate}[label=\alph*., leftmargin=*]
+      \item Energy transition and demand response.\\
+        A detailed analysis of the role of energy transition strategies in facilitating renewable energy integration and demand response mechanisms is conducted. 
+        This step highlights the challenges and opportunities in achieving a balanced energy system.
+      \item Optimization modeling in energy transition.\\
+        A thorough investigation into optimization models applied to energy transition scenarios is performed. 
+        This includes evaluating model structures, algorithms, methods, and frameworks used to enhance efficiency and sustainability in energy systems.
+    \end{enumerate}
+  \item Modeling.\\
+    The methodology includes the development of advanced optimization models tailored for managing renewable energy sources and electric vehicles. 
+    These models aim to address the challenges such as cost-efficiency, environmental sustainability, and grid stability. 
+    Key assumptions, parameters, and constraints are defined at this stage.
+    Also included in this section are the model and data validations.
+  \item Numerical simulations.\\
+    In this step, we solve numerically the proposed optimization model.
+    Then these simulations are analyzed under different scenarios to confirm the hypotheses and conclude into recommendations for the decision makers. 
+  \item Conclusion.\\
+    Insights gained during the review, modeling, and simulations are gathered in order to draw conclusions and implications of the proposed research.
+\end{enumerate}
+
+\section{Expected results}
+\begin{enumerate}[label=\arabic*.]
+  \item A bilateral demand response optimization model that benefits both the producers and the consumers.
+    \begin{enumerate}[label=\alph*., leftmargin=*]
+      \item A model with uncertainty of renewable resources and demand.
+      \item A model that considers the integration of electric vehicles.
+    \end{enumerate}
+  \item A modeling framework for optimal location analysis for biomass infrastructures taken into account the resiliency and sustainability.
+\end{enumerate}
+
+
+\section{References}
+
+\renewcommand{\bibname}{\vspace{-2em}}
+\bibliographystyle{plainnat}
+\bibliography{proposal_ref.bib}
+
+
+
+
+\end{document}
