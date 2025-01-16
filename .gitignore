@@ -6,4 +6,5 @@
 !*.bib
 !*.jpg
 !/abc/
+!/ABD/
 !.gitignore
