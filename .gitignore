@@ -5,5 +5,5 @@
 !*.sty
 !*.bib
 !*.jpg
-!/ABC
+!/abc/
 !.gitignore
