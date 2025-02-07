@@ -1,0 +1,204 @@
+\documentclass[11pt, oneside, reqno]{amsbook}
+
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{amsmath,amssymb,amsfonts,bbm}
+\usepackage{algorithmic}
+\usepackage{graphicx,float}
+\usepackage{tabularray}
+\usepackage{xcolor}
+\usepackage[a4paper, margin=1.05in]{geometry}
+
+\usepackage{titling}
+\usepackage{conliteraturemacros}
+
+
+
+\title{Literature for conference paper}
+\author{Seangleng Khe, Parin Chaipunya}
+
+
+\begin{document}
+
+\begin{center}
+  \huge{\bfseries\thetitle} \\[1em]
+  \Large\theauthor
+\end{center}
+\vspace{10em}
+
+\begingroup
+\let\clearpage\relax
+\tableofcontents
+\endgroup
+
+\chapter{Chance-constrained stochastic programming under variable reliability levels with an application to humanitarian relief network design}
+
+
+\begin{longtblr}[caption={Summary of Model of \cite{elci2018}}]{@{}ll@{}}
+  \hline\hline
+  {\SetCell{l} \bfseries PART 1: Theoretical Parts} \\
+  \hline
+  {\SetCell{l} \bfseries Objective} \\
+  $\min \leftarrow$ the risk tolerance \\
+  \hline\hline
+  {\bfseries Reformulation (in Value-at-risk): "equivalence relation"} \\
+  $\mathbb{P} (T_k \textbf{x} \ge \xi_k ) \ge 1 - \epsilon_k \Leftrightarrow T_k \textbf{x} \ge \textbf{F}^{(-1)}_{\xi_k} (1 - \epsilon_k )$ \\
+  \hline\hline
+  {\bfseries Some theories used in the paper (Lemma 1)} \\ 
+  Variable reduction \\
+  Valid inequality
+  \\ \hline \hline
+  {\bfseries PART 2: Modeling with application to humanitarian relief network design} \\
+  \hline 
+  {\bfseries Objective} 
+  $\min \leftarrow$ expected total delivery amount-weighted accessibilty score \\
+  and expected cost of tolerance (s.t. 11 constraints)\\
+  \hline \hline
+\end{longtblr}
+
+
+
+\chapter{A Chance-Constrained Programming (CCP) Approach to Solve the Energy Management Problem in Microgrids Considering Uncertainties of Renewable Energy Resources}
+
+\begin{longtblr}[caption={Summary of Model of \cite{hojjat2024}}]{@{}ll@{}}
+  \hline\hline
+  {\SetCell{l} \bfseries Parameter and Variables} \\
+  energy price \\
+  revenue function \\
+  cost function \\
+  Total demanded energy \\
+  Solar irradiance \\
+  Risk to reward \\
+  The energy level of the battery storage \\
+  Probability density function\\
+  Binary variables for charging of storage devices\\
+  Binary variables for on or off status of generators \\
+  \hline
+  {\SetCell{l} \bfseries Objective} \\
+  $\min \leftarrow$ the profit for the microgrid \\
+  \hline\hline
+  {\bfseries Reformulation} \\
+  Sample Average Approximation (SAA)  \\
+  \hline\hline
+\end{longtblr}
+
+
+\chapter{Analytical Reformulation of Chance-Constrained Optimal Power Flow with Uncertain Load Control}
+
+\begin{longtblr}[caption={Summary of Model of \cite{li2023}}]{@{}ll@{}}
+  \hline\hline
+  {\SetCell{l} \bfseries Objective} \\
+  $\min \leftarrow$ energy and reserve cost \\
+  s.t. 6 deterministic (Secondary frequency control + Power flow constraints) \\
+  and 19 prob constraints (re-dispatch constraints) \\
+  \hline\hline
+  {\SetCell{l} \bfseries Uncertainty: Gaussian} \\
+  \hline \hline
+  {\SetCell{l} \bfseries Reformulation} \\
+  \hline
+  {\SetCell{l} \bfseries Secondary frequency control constraints} \\
+  $\bullet$ one-variable constraints $\rightarrow$ linear constraints \\
+  $\bullet$ two-variable constraints $\rightarrow$ {\color{red} 2-norms!!} \\
+  {\SetCell{l} \bfseries Re-dispatch} \\
+  $\bullet$ re-define some variables \\
+  $\bullet$ observe secondary frequency control: whether it is active or inactive. \\
+  {\SetCell{l} \bfseries Power flow constraints} \\
+  Most difficult as all uncertainties lie in these constraints\\
+  \hline \hline
+  {\SetCell{l} \bfseries Algorithm} \\
+  Cutting plane (replace some complicated variables with slack variables)
+\end{longtblr}
+
+\chapter{On deterministic reformulations of distributionally robust joint chance constrained optimization problems}
+
+\begin{longtblr}[caption={Summary of Model of \cite{xie2017deterministic}}]{@{}ll@{}}
+  \hline\hline
+  {\SetCell{l} \bfseries DRCCP} \\
+  $\min c^T x ,$ \\
+  s.t. $\inf_{\mathbb{P} \in \mathcal{P}} \mathbb{P} [ \xi: F(x, \xi) \ge 0] \ge 1 - \epsilon$ \\
+  \hline\hline
+  {\SetCell{l} \bfseries Method} \\
+  $\bullet$ Define the feasible region $Z_D = \{ x \in \mathbb{R}^n: \inf_{\mathbb{P} \in \mathcal{P}} \mathbb{P} [\xi: F(x, \xi) \ge 0] \ge 1 - \epsilon \}$ \\
+  $\bullet$ Propose a deterministic conservative approximation of $Z_D$. \\
+  \\ \hline \hline
+\end{longtblr}
+
+\chapter{Chance-constrained optimization under limited distributional information: A review of reformulations based on sampling and distributional robustness}
+This is a summary of \cite{kucukyavuza2022chance}.
+
+
+\textbf{The chance-constrained problem CCP} In a probaiblity space $(\Omega, \mathcal{F}, \mathbb{P}^0)$
+\begin{subequations} \label{CCP}
+\begin{align}
+  \min_x & \quad  c^T x \\
+  & \text{s.t.} \quad \mathbb{P}^0 (x \in \mathcal{P} (\omega)) \ge 1 - \epsilon \\
+  &  x \in \mathcal{X},
+\end{align}
+\end{subequations}
+where $\omega$ is a random variable vector with a distribution $\\mathbb{P}^0$, $\mathcal{X} \subset \R^n$ is compact set defined by the determinitic constraints on the decision variables $x$ and risk level $\epsilon \le 0.05$.
+
+\textbf{Properties of CCPs} In this survey, the study is discussing on the linear chance constrained problems, i.e. polyhedral $\mathcal{P}(\omega)$. 
+More precisely, let 
+\begin{equation}
+  \mathcal{P}(\omega) := \{ x: T(\omega) x \ge r (\omega) \},
+\end{equation}
+where $T(\omega)$ is an $m \times n$ matrix  of random constraint coefficients and $r(\ranvar) \in \R^m$ is a vector of random right-hand sides.
+\begin{itemize}
+  \item $m=1:$ CCP is called \textit{individual} CCP.
+  \item $m >1:$ CCP is called \textit{joint} CCP.
+\end{itemize}
+If for all $\omega \in \Omega, T(\omega) = T$, then the CCP has right-hand side uncertainty.
+In contrast, the $technology$ $matrix$ $T(\omega)$ is random, the CCP has left-hand side uncertainty.
+One of the reformulations is choosing the smaple space $\Omega$ to be finite, which means that the CCP is under finite discrete distribution.\\
+
+\textbf{CCPs under finite discrete distribution} Given the probability space $(\Omega, 2^\Omega, \mathbb{P})$
+The Sample Average Approach (SAA) of \eqref{CCP} is 
+\begin{subequations} \label{CCP:SAA}
+  \begin{align}
+    \min_x & \quad  c^T x \\
+    & \text{s.t.} \quad \frac{1}{N} \sum_{i \in [N]} \mathbbm{1} (x \notin \mathcal(\omega_i)) \le \epsilon, \\
+    &  x \in \mathcal{X},
+  \end{align}
+  \end{subequations}
+where $\mathbbm{1}(\cdot)$ is the indicator function.
+
+$\clubsuit$ This leads to MIP via the introduction of binary variables and big-M constraints.
+
+\begin{enumerate}
+  \item[1.] \textbf{RHS uncertainty} 
+The problem \eqref{CCP:SAA} becomes 
+\begin{subequations}
+\begin{align}
+  \min_{x,t,z} & \quad c^T x \\
+  & \quad \text{s.t.} x \in \mathcal{X}, Tx = \bar{r} + t \\
+  & t_j \ge r_{i,j}(1-z_i), \forall i \in [N], \forall j \in [m] \\
+  & \frac{1}{N} \sum_{i \in [N]} z_i \le \epsilon \\
+  & t \in \mathbb{R}_+^m \\
+  & z \in \{0,1\}^N,
+\end{align}
+\end{subequations}
+where $\bar{r} \in \mathbb{R}^m$ is chosen to satisfy $r(\omega_i) \ge \bar{r}, \forall i $ and $r_i = (r_{i,1}, \dots, r_{i,m})^T$ denotes $r(\omega_i) - \bar{r}$. $[\dots]$
+
+  \item[2.] \textbf{LHS uncertainty} 
+The problem \eqref{CCP:SAA} becomes
+\begin{subequations}
+\begin{align}
+  \min_{x,z} & \quad c^T x \\
+  & \text{s.t.} x \in \mathcal{X} \\
+  &  T(\omega_i)x \ge r(\omega_i) - M(\omega_i) z_i, \forall \in [N] \label{ConLHS}\\
+  & \frac{1}{N} \sum_{i \in [N]} z_i \le \epsilon \\
+  & z \in \{0,1 \}^N,
+\end{align}
+\end{subequations}
+where $M(\omega_i), i \in [N]$ is a vector of big-M coefficients such that when $z_i=1$, inequality \eqref{ConLHS} is redundant.
+\end{enumerate}
+
+
+
+
+
+\bibliographystyle{plainnat}
+\bibliography{con-literature.bib}
+
+
+
+\end{document}

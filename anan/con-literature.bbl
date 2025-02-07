@@ -1,0 +1,38 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Elçi et~al.(2018)Elçi, Noyan, and Bülbül]{elci2018}
+Özgün Elçi, Nilay Noyan, and Kerem Bülbül.
+\newblock Chance-constrained stochastic programming under variable reliability levels with an application to humanitarian relief network design.
+\newblock \emph{Computers and Operations Research}, 96:\penalty0 91--107, 2018.
+\newblock \doi{10.1016/j.cor.2018.03.011}.
+
+\bibitem[Hojjat and Ghasemi(2024)]{hojjat2024}
+Mehrdad Hojjat and Abolfazl Ghasemi.
+\newblock A chance-constrained programming (ccp) approach to solve the energy management problem in microgrids considering uncertainties of renewable energy resources.
+\newblock In \emph{International Conference on Electrical, Computer and Energy Technologies (ICECET 2024)}, 2024.
+\newblock \doi{10.1109/ICECET61485.2024.10698265}.
+
+\bibitem[Küçükyavuza and Jiang(2022)]{kucukyavuza2022chance}
+Simge Küçükyavuza and Ruiwei Jiang.
+\newblock Chance-constrained optimization under limited distributional information: A review of reformulations based on sampling and distributional robustness.
+\newblock \emph{EURO Journal on Computational Optimization}, 10:\penalty0 100030, 2022.
+\newblock \doi{10.1016/j.ejco.2022.100030}.
+
+\bibitem[Li and Mathieu(2023)]{li2023}
+Bowen Li and Johanna~L. Mathieu.
+\newblock Analytical reformulation of chance-constrained optimal power flow with uncertain load control.
+\newblock \emph{IEEE Xplore}, 2023.
+\newblock \doi{10.1109/ICECET61485.2024.10698265}.
+
+\bibitem[Xie and Ahmed(2017)]{xie2017deterministic}
+Weijun Xie and Shabbir Ahmed.
+\newblock On deterministic reformulations of distributionally robust joint chance constrained optimization problems.
+\newblock \emph{Optimization Online}, 2017.
+\newblock URL \url{https://optimization-online.org/wp-content/uploads/2016/09/5639.pdf}.
+
+\end{thebibliography}

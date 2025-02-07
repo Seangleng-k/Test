@@ -1,0 +1,6 @@
+\contentsline {chapter}{\tocchapter {Chapter}{1}{Chance-constrained stochastic programming under variable reliability levels with an application to humanitarian relief network design}}{2}{}%
+\contentsline {chapter}{\tocchapter {Chapter}{2}{A Chance-Constrained Programming (CCP) Approach to Solve the Energy Management Problem in Microgrids Considering Uncertainties of Renewable Energy Resources}}{3}{}%
+\contentsline {chapter}{\tocchapter {Chapter}{3}{Analytical Reformulation of Chance-Constrained Optimal Power Flow with Uncertain Load Control}}{4}{}%
+\contentsline {chapter}{\tocchapter {Chapter}{4}{On deterministic reformulations of distributionally robust joint chance constrained optimization problems}}{5}{}%
+\contentsline {chapter}{\tocchapter {Chapter}{5}{Chance-constrained optimization under limited distributional information: A review of reformulations based on sampling and distributional robustness}}{6}{}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{8}{}%
